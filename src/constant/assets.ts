@@ -26,5 +26,9 @@ export const ASSETS = {
     heart: require("@/assets/images/decoratives/heart.webp"),
     paintKit: require("@/assets/images/decoratives/paint-kit.webp"),
     teaCup: require("@/assets/images/decoratives/tea-cup.webp"),
+    androidIcon: require("@/assets/images/decoratives/android-icon.png"),
+    sqlIcon: require("@/assets/images/decoratives/sql-icon.png"),
+    flutterIcon: require("@/assets/images/decoratives/flutter-icon.png"),
+    kotlinIcon: require("@/assets/images/decoratives/kotlin-icon.png"),
   },
 };
