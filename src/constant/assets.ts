@@ -1,10 +1,10 @@
 export const ASSETS = {
   home: {
     hero: {
-      avatarSmile: require("@/assets/images/home/hero/avatar-smile.webp"),
+      avatarSmile: require("@/assets/images/home/hero/avatar-smile.png"),
     },
     letsConnect: {
-      avatarBigSmile: require("@/assets/images/home/letsConnect/avatar-big-smile.webp"),
+      avatarBigSmile: require("@/assets/images/home/letsConnect/avatar-big-smile.png"),
       dribbble: require("@/assets/images/home/letsConnect/dribbble.webp"),
       github: require("@/assets/images/home/letsConnect/github.webp"),
       gmail: require("@/assets/images/home/letsConnect/gmail.webp"),

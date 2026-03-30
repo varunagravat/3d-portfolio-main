@@ -61,9 +61,8 @@ const MyLatestProjectSection = () => {
               <MotionWrapper
                 as="button"
                 key={index.toString()}
-                className={`relative ${
-                  activeTab === index ? "dk-gradient-bg" : "bg-white"
-                } w-[75px] h-[75px] md:w-[150px] md:h-[150px] rounded-2xl md:rounded-[25px] flex justify-center items-center shadow-xl overflow-hidden cursor-pointer`}
+                className={`relative ${activeTab === index ? "dk-gradient-bg" : "bg-white"
+                  } w-[75px] h-[75px] md:w-[150px] md:h-[150px] rounded-2xl md:rounded-[25px] flex justify-center items-center shadow-xl overflow-hidden cursor-pointer`}
                 initial={{ opacity: 0, y: 50 }}
                 animate={inView ? { opacity: 1, y: 0 } : {}}
                 transition={{ duration: 0.5, delay: 0.2 + index * 0.1 }}
@@ -87,9 +86,8 @@ const MyLatestProjectSection = () => {
                 />
                 <div className="absolute top-0 left-0 flex items-center justify-center w-full h-full transition-opacity duration-300 opacity-0 bg-gray/10 backdrop-blur-sm rounded-2xl md:rounded-[25px] hover:opacity-100 md:text-2xl">
                   <p
-                    className={`${
-                      activeTab === index ? "text-white" : "text-accent"
-                    } font-bold transition-colors duration-75 ease-in-out`}
+                    className={`${activeTab === index ? "text-white" : "text-accent"
+                      } font-bold transition-colors duration-75 ease-in-out`}
                   >
                     {tab.name}
                   </p>
@@ -99,102 +97,98 @@ const MyLatestProjectSection = () => {
           </div>
           {/* content */}
           <div className="overflow-hidden">
-            <div className="bg-gray rounded-[36px] p-[26px] w-full h-[600px] overflow-y-auto">
-              <div className="grid grid-flow-row grid-cols-12 gap-[26px]">
-                {tabs.map((tab, tabIndex) =>
-                  tab.data.map(
-                    (item, dataIndex) =>
-                      activeTab === tabIndex && (
+            <div className="bg-white/5 backdrop-blur-[30px] border border-white/20 rounded-[50px] p-10 md:p-14 w-full h-[650px] overflow-y-auto shadow-[0_20px_50px_rgba(0,0,0,0.1)] relative overflow-hidden group/container">
+              {/* Subtle background flourishes */}
+              <div className="absolute top-0 right-0 w-[500px] h-[500px] bg-primary/5 rounded-full blur-[120px] -translate-y-1/2 translate-x-1/2 pointer-events-none" />
+              <div className="absolute bottom-0 left-0 w-[500px] h-[500px] bg-secondary/5 rounded-full blur-[120px] translate-y-1/2 -translate-x-1/2 pointer-events-none" />
+
+              <div className="grid grid-cols-2 xs:grid-cols-3 sm:grid-cols-4 lg:grid-cols-4 xl:grid-cols-5 gap-y-14 gap-x-10 relative z-10">
+                {tabs.map((tab, tabIndex) => {
+                  const iconGradients = [
+                    "from-[#5496FF] to-[#0052CC]",       // Blue
+                    "from-[#A293FF] to-[#6E59FF]",       // Purple
+                    "from-[#FF8A65] to-[#E64A19]",       // Orange
+                    "from-[#4BFDB9] to-[#00C853]",       // Emerald
+                    "from-[#FFD54F] to-[#FFA000]",       // Amber
+                    "from-[#4DD0E1] to-[#0097A7]",       // Cyan
+                    "from-[#81C784] to-[#388E3C]",       // Green
+                    "from-[#F06292] to-[#C2185B]"        // Rose
+                  ];
+
+                  return tab.data.map((item, dataIndex) =>
+                    activeTab === tabIndex && (
+                      <div key={dataIndex.toString()} className="flex flex-col items-center gap-5 group">
                         <MotionWrapper
-                          key={dataIndex.toString()}
-                          className="relative col-span-12 overflow-hidden group xl:col-span-6"
-                          initial={{ opacity: 0, x: -50 }}
-                          animate={inView ? { opacity: 1, x: 0 } : {}}
-                          transition={{ duration: 0.5 }}
-                          whileHover={{ scale: 1.05 }}
-                          whileTap={{ scale: 0.95 }}
+                          className="relative w-[90px] h-[90px] sm:w-[115px] sm:h-[115px] md:w-[140px] md:h-[140px] cursor-pointer"
+                          initial={{ opacity: 0, scale: 0.5, y: 20 }}
+                          animate={inView ? { opacity: 1, scale: 1, y: 0 } : {}}
+                          transition={{
+                            type: "spring",
+                            damping: 15,
+                            stiffness: 150,
+                            delay: dataIndex * 0.05,
+                          }}
+                          whileHover={{ scale: 1.12, y: -10 }}
+                          whileTap={{ scale: 0.92 }}
                         >
-                          <div className="col-span-6">
-                            <MotionWrapper
-                              className="bg-white p-[26px] rounded-2xl md:rounded-[25px] h-[261px] overflow-hidden"
-                              initial={{ opacity: 0, x: -50 }}
-                              animate={inView ? { opacity: 1, x: 0 } : {}}
-                              transition={{
-                                duration: 0.5,
-                                delay: 0.2 + dataIndex * 0.1,
-                              }}
-                            >
-                              <Image
-                                className="object-contain w-full h-auto"
-                                src={item.image}
-                                alt={`${item.title} project image`}
-                                width={441}
-                                height={261}
-                                priority
-                              />
-                            </MotionWrapper>
-                          </div>
-                          <div className="absolute top-0 bottom-0 left-0 right-0 transition-all duration-300 opacity-0 backdrop-blur-0 gap-y-2 group-hover:opacity-100 group-hover:backdrop-blur-sm bg-gray/10 rounded-2xl">
-                            <div className="flex flex-col items-center justify-center w-full h-full select-none lg:select-auto">
-                              <p className="p-8 text-xl font-bold text-center transition-all duration-150 ease-in-out line-clamp-1">
-                                {item.title}
-                              </p>
-                              <div className="flex flex-row gap-4 text-3xl">
-                                {item?.urls?.demo && (
-                                  <Link
-                                    className="p-4 transition-all duration-300 ease-in-out bg-gray rounded-2xl hover:text-white hover:bg-linear-to-r hover:from-primary hover:to-secondary"
-                                    href={{
-                                      pathname: item.urls?.demo,
-                                      query: {
-                                        utm_medium: "campaign",
-                                        utm_campaign: "3d-theme-portfolio",
-                                      },
-                                    }}
-                                    target="_blank"
-                                    title="Demo"
-                                  >
-                                    <IoMdOpen />
-                                  </Link>
-                                )}
-                                {item?.urls?.github && (
-                                  <Link
-                                    className="p-4 transition-all duration-150 ease-in-out bg-gray rounded-2xl hover:text-white hover:bg-linear-to-r hover:from-primary hover:to-secondary"
-                                    href={{
-                                      pathname: item.urls?.github,
-                                      query: {
-                                        utm_medium: "campaign",
-                                        utm_campaign: "3d-theme-portfolio",
-                                      },
-                                    }}
-                                    target="_blank"
-                                    title="GitHub Repository"
-                                  >
-                                    <BsGithub />
-                                  </Link>
-                                )}
-                                {item?.urls?.figma && (
-                                  <Link
-                                    className="p-4 transition-all duration-150 ease-in-out bg-gray rounded-2xl hover:text-white hover:bg-linear-to-r hover:from-primary hover:to-secondary"
-                                    href={{
-                                      pathname: item.urls.figma,
-                                      query: {
-                                        utm_medium: "campaign",
-                                        utm_campaign: "3d-theme-portfolio",
-                                      },
-                                    }}
-                                    target="_blank"
-                                    title="Figma Design"
-                                  >
-                                    <FiFigma />
-                                  </Link>
-                                )}
-                              </div>
+                          {/* Main App Icon Card */}
+                          <div className={`w-full h-full bg-linear-to-br ${iconGradients[dataIndex % iconGradients.length]} rounded-[28px] sm:rounded-[34px] md:rounded-[42px] shadow-[0_10px_25px_rgba(0,0,0,0.15)] flex items-center justify-center relative overflow-hidden transition-all duration-300 group-hover:shadow-[0_20px_40px_rgba(0,0,0,0.2)]`}>
+
+                            {/* Inner Highlight/Glow */}
+                            <div className="absolute inset-0 bg-white/10 opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none" />
+
+                            {/* 3D Asset */}
+                            <Image
+                              className="object-contain w-[65%] h-[65%] drop-shadow-[0_15px_15px_rgba(0,0,0,0.2)] transition-all duration-500 group-hover:scale-115 group-hover:rotate-6"
+                              src={item.image}
+                              alt={`${item.title} project image`}
+                              width={150}
+                              height={150}
+                              priority
+                            />
+
+                            {/* Glossy Overlay (Apple Style) */}
+                            <div className="absolute top-0 left-0 w-full h-[55%] bg-linear-to-b from-white/25 to-transparent rounded-t-[42px] pointer-events-none opacity-60" />
+
+                            {/* Minimal Hover Controls */}
+                            <div className="absolute inset-0 bg-black/30 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center gap-4">
+                              {item?.urls?.demo && (
+                                <Link
+                                  className="w-10 h-10 md:w-12 md:h-12 bg-white/20 backdrop-blur-md rounded-2xl flex items-center justify-center text-white hover:bg-white/40 transition-all hover:scale-110 shadow-lg"
+                                  href={item.urls.demo}
+                                  target="_blank"
+                                  onClick={(e) => e.stopPropagation()}
+                                >
+                                  <IoMdOpen className="text-xl md:text-2xl" />
+                                </Link>
+                              )}
+                              {item?.urls?.github && (
+                                <Link
+                                  className="w-10 h-10 md:w-12 md:h-12 bg-white/20 backdrop-blur-md rounded-2xl flex items-center justify-center text-white hover:bg-white/40 transition-all hover:scale-110 shadow-lg"
+                                  href={item.urls.github}
+                                  target="_blank"
+                                  onClick={(e) => e.stopPropagation()}
+                                >
+                                  <BsGithub className="text-xl md:text-2xl" />
+                                </Link>
+                              )}
                             </div>
                           </div>
                         </MotionWrapper>
-                      ),
-                  ),
-                )}
+
+                        {/* Improved App Label */}
+                        <div className="text-center w-full px-2">
+                          <h4 className="text-[12px] sm:text-[14px] md:text-[15px] font-bold text-accent tracking-tighter leading-[1.2] line-clamp-1 group-hover:text-primary transition-colors duration-300">
+                            {item.title}
+                          </h4>
+                          <span className="inline-block mt-1 text-[9px] sm:text-[10px] uppercase font-heavy tracking-[2px] opacity-40 text-accent group-hover:opacity-60 transition-opacity">
+                            {item.category || "App"}
+                          </span>
+                        </div>
+                      </div>
+                    )
+                  );
+                })}
               </div>
             </div>
           </div>

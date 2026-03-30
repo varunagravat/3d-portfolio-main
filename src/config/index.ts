@@ -1,3 +1,4 @@
+import { ASSETS } from "../constant/assets";
 import { TECH_STACK } from "../constant/tech-stack";
 
 /**
@@ -15,9 +16,9 @@ export const CONFIG = {
   role: "Sr. Application Developer",
   location: "Rajkot, Gujarat, India",
   socials: {
-    github: "https://github.com/VarunAgravat",
-    linkedin: "https://www.linkedin.com/in/varun-agravat",
-    instagram: "https://www.instagram.com/",
+    github: "https://github.com/varunagravat/",
+    linkedin: "https://www.linkedin.com/in/varun-agravat-85a4a91b2/",
+    instagram: "https://www.instagram.com/varun__agravat/",
     dribbble: "https://dribbble.com/",
   },
   quotes: {
@@ -45,7 +46,7 @@ export const CONFIG = {
       title: "Neaben (Android Platform)",
       summary:
         "A location-based app linking users to Ghanaian businesses. Developed listings, geo-search, and reviews using Kotlin, Java, Retrofit, and Google Maps API.",
-      image: "/projects/3d-portfolio.webp", // Placeholder
+      image: ASSETS.home.myLatestProject.rocket,
       techStack: [
         TECH_STACK.kotlin,
         TECH_STACK.java,
@@ -54,6 +55,7 @@ export const CONFIG = {
       ],
       urls: {
         demo: "https://docs.google.com/document/d/1hPtAMuQPaBMEKaDMNoOuNmXSlXEKt4pOvtoXt-4Fv0M/edit?usp=sharing",
+        github: "https://github.com/varunagravat/",
       },
       category: "Mobile App",
     },
@@ -61,7 +63,7 @@ export const CONFIG = {
       title: "Application Delivery Excellence",
       summary:
         "Delivered 15+ Android applications exceeding deployment timelines by 20% at Upswing Techno Labs.",
-      image: "/projects/3d-portfolio.webp", // Placeholder
+      image: ASSETS.home.myLatestProject.suitcase,
       techStack: [
         TECH_STACK.androidstudio,
         TECH_STACK.java,
@@ -69,6 +71,7 @@ export const CONFIG = {
       ],
       urls: {
         demo: "#",
+        github: "#",
       },
       category: "Professional Milestone",
     },
@@ -76,7 +79,7 @@ export const CONFIG = {
       title: "Performance Boost Module",
       summary:
         "Enhanced app performance, boosting user satisfaction scores by 25% through optimized resource management and background processing.",
-      image: "/projects/3d-portfolio.webp", // Placeholder
+      image: ASSETS.decoratives.bulb,
       techStack: [
         TECH_STACK.sqlite,
         TECH_STACK.firebase,
@@ -84,6 +87,7 @@ export const CONFIG = {
       ],
       urls: {
         demo: "#",
+        github: "#",
       },
       category: "Engineering",
     },
@@ -91,15 +95,48 @@ export const CONFIG = {
       title: "UI Design Streamlining System",
       summary:
         "Designed handset-specific UI solutions for Tablets, PCs, and mobile phones, cutting development time by 3 weeks per project.",
-      image: "/projects/3d-portfolio.webp", // Placeholder
+      image: ASSETS.decoratives.paintKit,
       techStack: [
         TECH_STACK.androidstudio,
         TECH_STACK.kotlin,
       ],
       urls: {
         demo: "#",
+        github: "#",
       },
       category: "UI/UX",
+    },
+    {
+      title: "Cloud Sync Engine",
+      summary: "Real-time data synchronization system for multi-device cross-platform applications.",
+      image: ASSETS.decoratives.zigZag,
+      techStack: [TECH_STACK.firebase, TECH_STACK.kotlin],
+      urls: { demo: "#", github: "#" },
+      category: "Infrastructure",
+    },
+    {
+      title: "Customer Support Portal",
+      summary: "Unified dashboard for managing customer inquiries and ticket resolution workflow.",
+      image: ASSETS.decoratives.teaCup,
+      techStack: [TECH_STACK.reactjs, TECH_STACK.nextjs],
+      urls: { demo: "#", github: "#" },
+      category: "Web App",
+    },
+    {
+      title: "Social Connect API",
+      summary: "Secure and scalable API for integrating social media features into mobile apps.",
+      image: ASSETS.decoratives.heart,
+      techStack: [TECH_STACK.javascript, TECH_STACK.firebase],
+      urls: { demo: "#", github: "#" },
+      category: "Backend",
+    },
+    {
+      title: "Security Shield Pro",
+      summary: "Advanced security layer for encrypting sensitive user data and preventing unauthorized access.",
+      image: ASSETS.decoratives.twistedTorus,
+      techStack: [TECH_STACK.java, TECH_STACK.cpp],
+      urls: { demo: "#", github: "#" },
+      category: "Security",
     },
   ],
 } satisfies Config;
