@@ -69,9 +69,8 @@ const Navbar = () => {
               {NAVIGATION_LINKS.map((link, _index) => (
                 <li key={link.name}>
                   <Link
-                    className={`${
-                      pathname === link.href ? "text-accent" : "text-accent2"
-                    } p-4`}
+                    className={`${pathname === link.href ? "text-accent" : "text-accent2"
+                      } p-4`}
                     href={link.href}
                   >
                     {link.name}
@@ -86,6 +85,12 @@ const Navbar = () => {
             >
               Resume
             </a>
+            <Link
+              className="px-6 py-2 border-2 border-primary text-primary hover:bg-primary hover:text-white transition-all rounded-xl font-bold"
+              href="/hire-me"
+            >
+              Hire Me!
+            </Link>
           </div>
           {/* mobile hamburger menu */}
           <div className="z-50 md:hidden">
@@ -110,9 +115,8 @@ const Navbar = () => {
       </nav>
       {/* mobile menu */}
       <div
-        className={`${
-          isMenuOpen ? "top-0" : "-translate-y-full"
-        } fixed top-0 w-screen h-screen transition-all duration-500 ease-in-out z-40 bg-white`}
+        className={`${isMenuOpen ? "top-0" : "-translate-y-full"
+          } fixed top-0 w-screen h-screen transition-all duration-500 ease-in-out z-40 bg-white`}
         style={{
           paddingTop: navbarRef.current
             ? `${navbarRef.current.offsetHeight}px`
@@ -130,18 +134,16 @@ const Navbar = () => {
                 >
                   <div className="flex items-center justify-between">
                     <span
-                      className={`${
-                        pathname === link.href
-                          ? "dk-gradient-text"
-                          : "text-accent"
-                      } text-2xl font-semibold`}
+                      className={`${pathname === link.href
+                        ? "dk-gradient-text"
+                        : "text-accent"
+                        } text-2xl font-semibold`}
                     >
                       {link.name}
                     </span>
                     <span
-                      className={`${
-                        pathname === link.href ? "text-secondary" : ""
-                      } text-4xl`}
+                      className={`${pathname === link.href ? "text-secondary" : ""
+                        } text-4xl`}
                     >
                       <RxCaretRight />
                     </span>
@@ -149,7 +151,7 @@ const Navbar = () => {
                 </Link>
               </li>
             ))}
-            <li className="flex text-white rounded-lg dk-gradient-bg">
+            <li className="flex text-white rounded-lg dk-gradient-bg mb-2">
               <a
                 href={CONFIG.resume.downloadUrl}
                 className="flex-1 py-4 dk-safe-x-padding"
@@ -162,6 +164,20 @@ const Navbar = () => {
                   </span>
                 </div>
               </a>
+            </li>
+            <li className="flex border-2 border-primary text-primary rounded-lg">
+              <Link
+                href="/hire-me"
+                className="flex-1 py-4 dk-safe-x-padding"
+                onClick={closeMenu}
+              >
+                <div className="flex items-center justify-between">
+                  <span className="text-2xl font-semibold">Hire Me!</span>
+                  <span className="text-4xl text-primary">
+                    <RxCaretRight />
+                  </span>
+                </div>
+              </Link>
             </li>
           </ul>
         </div>

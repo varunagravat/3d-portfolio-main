@@ -15,6 +15,8 @@ import {
   SiMysql,
   SiSqlite,
   SiCplusplus,
+  SiFlutter,
+  SiJetpackcompose,
 } from "react-icons/si";
 import { FaJava } from "react-icons/fa";
 import { TbBrandReactNative } from "react-icons/tb";
@@ -125,5 +127,17 @@ export const TECH_STACK = {
     icon: <SiSqlite />,
     color: "text-blue-400",
     siteUrl: "https://www.sqlite.org/",
+  },
+  flutter: {
+    name: "Flutter",
+    icon: <SiFlutter />,
+    color: "text-blue-400",
+    siteUrl: "https://flutter.dev/",
+  },
+  jetpackcompose: {
+    name: "Jetpack Compose",
+    icon: <SiJetpackcompose />,
+    color: "text-green-500",
+    siteUrl: "https://developer.android.com/jetpack/compose",
   },
 } satisfies Record<string, TechStack>;
