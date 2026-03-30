@@ -127,8 +127,12 @@
 }
 /* End of Mobile & Tablet Hamburger */
 
-body {
+html {
   background: var(--background);
+}
+
+body {
+  background: transparent !important;
   color: var(--foreground);
   font-family: var(--font-poppins);
 }

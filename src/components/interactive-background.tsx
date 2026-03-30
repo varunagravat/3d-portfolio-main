@@ -30,18 +30,18 @@ const InteractiveBackground = () => {
     const layer2X = useTransform(smoothX, [-0.5, 0.5], [-50, 50]);
     const layer2Y = useTransform(smoothY, [-0.5, 0.5], [-50, 50]);
 
-    const layer3X = useTransform(smoothX, [-0.5, 0.5], [-100, 100]);
-    const layer3Y = useTransform(smoothY, [-0.5, 0.5], [-100, 100]);
+    const layer3X = useTransform(smoothX, [-0.5, 0.5], [-150, 150]);
+    const layer3Y = useTransform(smoothY, [-0.5, 0.5], [-150, 150]);
 
     // Random particles for 3 layers
     const particles = useMemo(() => {
-        return Array.from({ length: 45 }).map((_, i) => ({
+        return Array.from({ length: 60 }).map((_, i) => ({
             id: i,
             x: Math.random() * 100,
             y: Math.random() * 100,
-            size: Math.random() * 3 + 1,
+            size: Math.random() * 5 + 2,
             layer: i % 3 + 1, // 1, 2, or 3
-            opacity: Math.random() * 0.2 + 0.1,
+            opacity: Math.random() * 0.4 + 0.2,
         }));
     }, []);
 

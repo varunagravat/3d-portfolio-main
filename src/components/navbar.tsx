@@ -54,10 +54,10 @@ const Navbar = () => {
     <>
       <nav
         ref={navbarRef}
-        className={`sticky top-0 z-50 w-screen bg-white md:relative dk-safe-layout`}
+        className={`sticky top-0 z-50 w-screen bg-white/70 backdrop-blur-lg md:relative dk-safe-layout`}
       >
         {/* <Banner /> */}
-        <div className="flex flex-row items-center justify-between py-6 border-b-2 border-b-gray dk-safe-x-padding">
+        <div className="flex flex-row items-center justify-between py-6 border-b border-white/20 dk-safe-x-padding">
           <Link className="z-50" href="/" onClick={closeMenu} prefetch={false}>
             <div className="w-[75px] h-[45px] lg:w-[100px] lg:h-[60px]">
               <BrandIcon />

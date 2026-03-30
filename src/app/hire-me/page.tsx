@@ -1,20 +1,13 @@
 "use client";
 
 import { motion } from "framer-motion";
-import Link from "react-router-dom"; // Wait, this project uses Next.js Link
 import { FaChevronLeft, FaPaperPlane, FaBriefcase, FaCode, FaRocket } from "react-icons/fa";
 import { CONFIG } from "@/config";
 import LinkNext from "next/link";
 
 const HireMePage = () => {
     return (
-        <main className="min-h-screen bg-[#f8fafc] dk-safe-layout py-20 px-4">
-            {/* Background Flourish */}
-            <div className="fixed top-0 left-0 w-full h-full overflow-hidden pointer-events-none z-0">
-                <div className="absolute top-[-10%] right-[-10%] w-[500px] h-[500px] bg-primary/5 rounded-full blur-[120px]" />
-                <div className="absolute bottom-[-10%] left-[-10%] w-[500px] h-[500px] bg-secondary/5 rounded-full blur-[120px]" />
-            </div>
-
+        <main className="min-h-screen bg-transparent dk-safe-layout py-20 px-4">
             <div className="grid max-w-6xl mx-auto z-10 relative">
                 {/* Back Link */}
                 <LinkNext
