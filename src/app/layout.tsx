@@ -12,6 +12,7 @@ import {
 } from "@/constant/font";
 import { env } from "@/env";
 import CustomCursor from "@/components/custom-cursor";
+import InteractiveBackground from "@/components/interactive-background";
 
 import "./globals.css";
 
@@ -58,6 +59,7 @@ export default function RootLayout({
       <body
         className={`${FONT_MONTSERRAT.variable} ${FONT_POPPINS.variable} ${FONT_BEBAS_NEUE.variable} ${FONT_EL_MESSIRI.variable} ${FONT_WALLPOET.variable} ${FONT_BLACK_OPS_ONE.variable} ${FONT_GRAVITAS_ONE.variable} antialiased`}
       >
+        <InteractiveBackground />
         <CustomCursor />
         <Navbar />
         {children}
