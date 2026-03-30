@@ -11,17 +11,18 @@ import {
   FONT_WALLPOET,
 } from "@/constant/font";
 import { env } from "@/env";
+import CustomCursor from "@/components/custom-cursor";
 
 import "./globals.css";
 
 export const metadata: Metadata = {
-  title: "3D theme Portfolio",
+  title: "Varun Agravat - Portfolio",
   description: `${CONFIG.name.first.concat(
     " ",
     CONFIG.name.last,
   )}'s 3D theme Portfolio`,
   openGraph: {
-    title: "3D theme Portfolio",
+    title: "Varun Agravat - Portfolio",
     description: `${CONFIG.name.first.concat(
       " ",
       CONFIG.name.last,
@@ -32,12 +33,12 @@ export const metadata: Metadata = {
         url: `${env.NEXT_PUBLIC_APP_URL}/og-image.webp`,
         width: 1200,
         height: 630,
-        alt: "3D theme Portfolio",
+        alt: "Varun Agravat - Portfolio",
       },
     ],
   },
   twitter: {
-    title: "3D theme Portfolio",
+    title: "Varun Agravat - Portfolio",
     description: `${CONFIG.name.first.concat(
       " ",
       CONFIG.name.last,
@@ -57,6 +58,7 @@ export default function RootLayout({
       <body
         className={`${FONT_MONTSERRAT.variable} ${FONT_POPPINS.variable} ${FONT_BEBAS_NEUE.variable} ${FONT_EL_MESSIRI.variable} ${FONT_WALLPOET.variable} ${FONT_BLACK_OPS_ONE.variable} ${FONT_GRAVITAS_ONE.variable} antialiased`}
       >
+        <CustomCursor />
         <Navbar />
         {children}
       </body>
