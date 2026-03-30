@@ -1,6 +1,5 @@
 import type { Metadata } from "next";
 import Navbar from "@/components/navbar";
-import { CONFIG } from "@/config";
 import {
   FONT_BEBAS_NEUE,
   FONT_BLACK_OPS_ONE,
@@ -10,42 +9,48 @@ import {
   FONT_POPPINS,
   FONT_WALLPOET,
 } from "@/constant/font";
-import { env } from "@/env";
 import CustomCursor from "@/components/custom-cursor";
 import MeshBackground from "@/components/mesh-background";
 
 import "./globals.css";
 
 export const metadata: Metadata = {
-  title: "Varun Agravat - Portfolio",
-  description: `${CONFIG.name.first.concat(
-    " ",
-    CONFIG.name.last,
-  )}'s 3D theme Portfolio`,
+  title: {
+    default: "Varun Agravat | Freelance Android & Flutter Developer",
+    template: "%s | Varun Agravat",
+  },
+  description:
+    "Hire Varun Agravat, a professional Freelance Android & Flutter Developer with 5+ years of experience. Expert in Kotlin, Jetpack Compose, Laravel, and React.",
+  keywords: [
+    "Freelance Android Developer",
+    "Hire Android Developer",
+    "Flutter Developer India",
+    "Kotlin Expert",
+    "Jetpack Compose Developer",
+    "Laravel Developer",
+    "React Developer",
+    "Varun Agravat",
+    "Mobile App Consultant",
+  ],
+  authors: [{ name: "Varun Agravat" }],
+  creator: "Varun Agravat",
   openGraph: {
-    title: "Varun Agravat - Portfolio",
-    description: `${CONFIG.name.first.concat(
-      " ",
-      CONFIG.name.last,
-    )}'s 3D theme Portfolio`,
-    url: env.NEXT_PUBLIC_APP_URL,
-    images: [
-      {
-        url: `${env.NEXT_PUBLIC_APP_URL}/og-image.webp`,
-        width: 1200,
-        height: 630,
-        alt: "Varun Agravat - Portfolio",
-      },
-    ],
+    type: "website",
+    locale: "en_US",
+    url: "https://varunagravat.com",
+    title: "Varun Agravat | Freelance Android & Flutter Developer",
+    description: "Expert mobile app development services for startups and businesses.",
+    siteName: "Varun Agravat Portfolio",
   },
   twitter: {
-    title: "Varun Agravat - Portfolio",
-    description: `${CONFIG.name.first.concat(
-      " ",
-      CONFIG.name.last,
-    )}'s 3D theme Portfolio`,
-    images: [`${env.NEXT_PUBLIC_APP_URL}/og-image.webp`],
     card: "summary_large_image",
+    title: "Varun Agravat | Freelance Android & Flutter Developer",
+    description: "Expert mobile app development services.",
+    creator: "@varunagravat",
+  },
+  robots: {
+    index: true,
+    follow: true,
   },
 };
 

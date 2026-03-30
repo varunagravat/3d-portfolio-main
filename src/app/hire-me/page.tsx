@@ -26,7 +26,7 @@ const HireMePage = () => {
                         transition={{ duration: 0.6 }}
                     >
                         <h1 className="text-5xl lg:text-7xl font-bold mb-6 dk-gradient-text leading-tight">
-                            Let's Build Something <br /> Amazing Together.
+                            Hire Me — <br /> Freelance Android & <br /> Flutter Developer.
                         </h1>
                         <p className="text-xl text-accent2 mb-10 leading-relaxed max-w-lg">
                             I help startups and businesses build high-performance mobile and web applications.

@@ -10,7 +10,7 @@ import { ASSETS } from "@/constant/assets";
 
 type TAnimateImageProps = MotionProps & {
   className: string;
-  src: string;
+  src: any;
   width: number;
   height: number;
 };
@@ -87,10 +87,10 @@ const HeroSection = () => {
             Welcome to {CONFIG.name.first}&apos;s Portfolio
           </MotionWrapper>
           <MotionWrapper
-            as="h2"
+            as="h1"
             className="font-montserrat font-extrabold text-5xl md:text-[64px] md:leading-14 lg:text-[66px] lg:leading-[88px] dk-gradient-text mb-6 text-center xl:text-left"
           >
-            {CONFIG.role}
+            Hire Freelance Android & <br /> Flutter Developer
           </MotionWrapper>
           <MotionWrapper
             as="p"
