@@ -1,34 +1,57 @@
+import avatarSmile from "@/assets/images/home/hero/avatar-smile.png";
+import avatarBigSmile from "@/assets/images/home/letsConnect/avatar-big-smile.png";
+import dribbble from "@/assets/images/home/letsConnect/dribbble.webp";
+import github from "@/assets/images/home/letsConnect/github.webp";
+import gmail from "@/assets/images/home/letsConnect/gmail.webp";
+import instagram from "@/assets/images/home/letsConnect/instagram.webp";
+import linkedin from "@/assets/images/home/letsConnect/linkedin.webp";
+import figma from "@/assets/images/home/myLatestProject/figma.webp";
+import rocket from "@/assets/images/home/myLatestProject/rocket.webp";
+import suitcase from "@/assets/images/home/myLatestProject/suitcase.webp";
+import quadrilateral from "@/assets/images/decoratives/quadrilateral.webp";
+import triangle from "@/assets/images/decoratives/triangle.webp";
+import twistedTorus from "@/assets/images/decoratives/twisted-torus.webp";
+import zigZag from "@/assets/images/decoratives/zig-zag.webp";
+import bulb from "@/assets/images/decoratives/bulb.webp";
+import heart from "@/assets/images/decoratives/heart.webp";
+import paintKit from "@/assets/images/decoratives/paint-kit.webp";
+import teaCup from "@/assets/images/decoratives/tea-cup.webp";
+import androidIcon from "@/assets/images/decoratives/android-icon.png";
+import sqlIcon from "@/assets/images/decoratives/sql-icon.png";
+import flutterIcon from "@/assets/images/decoratives/flutter-icon.png";
+import kotlinIcon from "@/assets/images/decoratives/kotlin-icon.png";
+
 export const ASSETS = {
   home: {
     hero: {
-      avatarSmile: require("@/assets/images/home/hero/avatar-smile.png"),
+      avatarSmile,
     },
     letsConnect: {
-      avatarBigSmile: require("@/assets/images/home/letsConnect/avatar-big-smile.png"),
-      dribbble: require("@/assets/images/home/letsConnect/dribbble.webp"),
-      github: require("@/assets/images/home/letsConnect/github.webp"),
-      gmail: require("@/assets/images/home/letsConnect/gmail.webp"),
-      instagram: require("@/assets/images/home/letsConnect/instagram.webp"),
-      linkedin: require("@/assets/images/home/letsConnect/linkedin.webp"),
+      avatarBigSmile,
+      dribbble,
+      github,
+      gmail,
+      instagram,
+      linkedin,
     },
     myLatestProject: {
-      figma: require("@/assets/images/home/myLatestProject/figma.webp"),
-      rocket: require("@/assets/images/home/myLatestProject/rocket.webp"),
-      suitcase: require("@/assets/images/home/myLatestProject/suitcase.webp"),
+      figma,
+      rocket,
+      suitcase,
     },
   },
   decoratives: {
-    quadrilateral: require("@/assets/images/decoratives/quadrilateral.webp"),
-    triangle: require("@/assets/images/decoratives/triangle.webp"),
-    twistedTorus: require("@/assets/images/decoratives/twisted-torus.webp"),
-    zigZag: require("@/assets/images/decoratives/zig-zag.webp"),
-    bulb: require("@/assets/images/decoratives/bulb.webp"),
-    heart: require("@/assets/images/decoratives/heart.webp"),
-    paintKit: require("@/assets/images/decoratives/paint-kit.webp"),
-    teaCup: require("@/assets/images/decoratives/tea-cup.webp"),
-    androidIcon: require("@/assets/images/decoratives/android-icon.png"),
-    sqlIcon: require("@/assets/images/decoratives/sql-icon.png"),
-    flutterIcon: require("@/assets/images/decoratives/flutter-icon.png"),
-    kotlinIcon: require("@/assets/images/decoratives/kotlin-icon.png"),
+    quadrilateral,
+    triangle,
+    twistedTorus,
+    zigZag,
+    bulb,
+    heart,
+    paintKit,
+    teaCup,
+    androidIcon,
+    sqlIcon,
+    flutterIcon,
+    kotlinIcon,
   },
 };
